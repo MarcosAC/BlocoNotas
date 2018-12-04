@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:BlocoNotas.Controls"
+             x:Class="BlocoNotas.Views.NoteView">
+    
+    <StackLayout Padding="10">
+        <controls:CustomEntry  Text="{Binding TitleNote}"
+                               Placeholder="Título" 
+                               MaxLength="30" 
+                               Margin="0,0,0,15" />
+
+        <controls:CustomEditor Text="{Binding TextNote}"
+                               HeightRequest="180" 
+                               MaxLength="240" />
+    </StackLayout>
+</ContentView>

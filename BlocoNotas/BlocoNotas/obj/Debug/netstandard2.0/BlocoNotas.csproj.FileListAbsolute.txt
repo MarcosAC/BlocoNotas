@@ -1,0 +1,16 @@
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\bin\Debug\netstandard2.0\BlocoNotas.deps.json
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\bin\Debug\netstandard2.0\BlocoNotas.dll
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\bin\Debug\netstandard2.0\BlocoNotas.pdb
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\BlocoNotas.csprojAssemblyReference.cache
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\Views\AddNoteView.xaml.g.cs
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\Views\DetailsNoteView.xaml.g.cs
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\Views\EditNoteView.xaml.g.cs
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\Views\ListNoteView.xaml.g.cs
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\Views\NoteView.xaml.g.cs
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\BlocoNotas.csproj.CoreCompileInputs.cache
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\BlocoNotas.AssemblyInfoInputs.cache
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\BlocoNotas.AssemblyInfo.cs
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\BlocoNotas.dll
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\BlocoNotas.pdb
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\obj\Debug\netstandard2.0\XamlC.stamp
