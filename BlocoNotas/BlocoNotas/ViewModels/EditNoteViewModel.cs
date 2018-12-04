@@ -6,17 +6,17 @@ using Xamarin.Forms;
 
 namespace BlocoNotas.ViewModels
 {
-    public class EditDeleteNotaViewModel : BaseViewModel
+    class EditNoteViewModel : BaseViewModel
     {
         private readonly INoteRepository _noteRepository;
         private readonly INavigationService _navigationService;
 
         private Note _note;
 
-        public EditDeleteNotaViewModel(Note selectedNote)
+        public EditNoteViewModel(Note selectedNote)
         {
             _noteRepository = new NoteRepository();
-            _navigationService = new NavigationService();            
+            _navigationService = new NavigationService();
 
             _note = new Note
             {
@@ -28,7 +28,7 @@ namespace BlocoNotas.ViewModels
 
         public string TitleNote
         {
-            get => _note.TitleNote;            
+            get => _note.TitleNote;
             set
             {
                 _note.TitleNote = value;
@@ -53,7 +53,7 @@ namespace BlocoNotas.ViewModels
 
         private Command _UpDateSelectedNoteCommand;
         public Command UpDateSelectedNoteCommand => _UpDateSelectedNoteCommand ?? (_UpDateSelectedNoteCommand = new Command(async () => await ExecuteUpDateSelectedNoteCommand()));
-        
+
         private async Task ExecuteUpDateSelectedNoteCommand()
         {
             try
@@ -67,22 +67,6 @@ namespace BlocoNotas.ViewModels
             }
 
             await _navigationService.PopAsync();
-        }
-
-        private Command _DeleteSelectedNoteCommand;
-        public Command DeleteSelectedNoteCommand => _DeleteSelectedNoteCommand ?? (_DeleteSelectedNoteCommand = new Command(async () => await ExecuteDeleteSelectedNoteCommand()));
-
-        private async Task ExecuteDeleteSelectedNoteCommand()
-        {
-            try
-            {
-                _noteRepository.Delete(_note);
-                await App.Current.MainPage.DisplayAlert("Excluir", "Nota excluida com sucesso.", "OK");
-            }
-            catch (Exception)
-            {
-                await App.Current.MainPage.DisplayAlert("Erro", "Erro ao excluir nota", "OK");
-            }
         }
     }
 }

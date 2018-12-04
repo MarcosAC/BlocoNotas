@@ -14,7 +14,7 @@ namespace BlocoNotas.Views
 
             NavigationPage.SetHasBackButton(this, false);
 
-            BindingContext = new EditDeleteNotaViewModel(selectedNote);
+            BindingContext = new EditNoteViewModel(selectedNote);
         }
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using BlocoNotas.Models;
 using BlocoNotas.Services;
+using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -47,5 +48,23 @@ namespace BlocoNotas.ViewModels
         public Command BackListNotesCommand => _BackListNotesCommand ?? (_BackListNotesCommand = new Command(async () => await ExecuteBackListNotesCommand()));
 
         private async Task ExecuteBackListNotesCommand() => await _navigationService.PopAsync();
+
+        private Command _DeleteSelectedNoteCommand;
+        public Command DeleteSelectedNoteCommand => _DeleteSelectedNoteCommand ?? (_DeleteSelectedNoteCommand = new Command(async () => await ExecuteDeleteSelectedNoteCommand()));
+
+        private async Task ExecuteDeleteSelectedNoteCommand()
+        {
+            try
+            {
+                _noteRepository.Delete(_note);
+                await App.Current.MainPage.DisplayAlert("Excluir", "Nota excluida com sucesso.", "OK");
+            }
+            catch (Exception)
+            {
+                await App.Current.MainPage.DisplayAlert("Erro", "Erro ao excluir nota", "OK");
+            }
+
+            await _navigationService.PopAsync();
+        }
     }
 }

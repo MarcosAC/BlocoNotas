@@ -16,7 +16,9 @@ namespace BlocoNotas.Services
 
         public void Delete(Note note)
         {
-            RealmDb.Write(() => RealmDb.Remove(note));
+            var noteData = RealmDb.Find<Note>(note.NoteId);
+
+            RealmDb.Write(() => RealmDb.Remove(noteData));
         }
 
         public void DeleteAll()

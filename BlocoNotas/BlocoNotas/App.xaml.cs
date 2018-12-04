@@ -11,7 +11,7 @@ namespace BlocoNotas
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new DetailsNoteView())
+            MainPage = new NavigationPage(new ListNoteView())
             {
                 BarBackgroundColor = Color.White,
                 BarTextColor = Color.Black

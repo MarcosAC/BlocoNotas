@@ -59,19 +59,15 @@
         </StackLayout>
     </NavigationPage.TitleView>
 
-    <StackLayout Padding="20">
+    <StackLayout Padding="10">
         <!-- Título -->
         <StackLayout>
-            <Label Text="Título"
-               TextColor="Black"               
-               FontSize="Medium" />
-
             <Label Text="Para lembrar"                
                FontSize="Medium" />
 
             <BoxView HeightRequest="1" 
                      BackgroundColor="Gray" 
-                     Margin="0,0,0,20" />
+                     Margin="0,0,0,10" />
         </StackLayout>
 
         <!-- Texto -->
