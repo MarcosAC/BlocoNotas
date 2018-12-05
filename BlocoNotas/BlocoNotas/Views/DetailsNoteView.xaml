@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BlocoNotas.Views"
              x:Class="BlocoNotas.Views.DetailsNoteView">
     
     <NavigationPage.TitleView>
@@ -59,26 +60,5 @@
         </StackLayout>
     </NavigationPage.TitleView>
 
-    <StackLayout Padding="10">
-        <!-- Título -->
-        <StackLayout>
-            <Label Text="Para lembrar"                
-               FontSize="Medium" />
-
-            <BoxView HeightRequest="1" 
-                     BackgroundColor="Gray" 
-                     Margin="0,0,0,10" />
-        </StackLayout>
-
-        <!-- Texto -->
-        <StackLayout>
-            <Frame CornerRadius="10" 
-                   BorderColor="LightGray"
-                   HasShadow="False"
-                   HeightRequest="250">
-
-                <Label Text="Eu sou o máximo!" FontSize="Medium" />
-            </Frame>
-        </StackLayout>
-    </StackLayout>
+    <local:NoteView IsEnabled="False" />    
 </ContentPage>
