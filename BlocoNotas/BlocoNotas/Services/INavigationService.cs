@@ -7,7 +7,7 @@ namespace BlocoNotas.Services
     {
         Task PushAsync(Page page);
         Task PushModalAsync(Page page);
-        Task PopModalAsync();
+        Task PushModalAsync();
         Task PopAsync();
     }
 }

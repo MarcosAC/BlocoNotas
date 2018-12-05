@@ -1,5 +1,6 @@
 ﻿using BlocoNotas.Models;
 using BlocoNotas.Services;
+using BlocoNotas.Views;
 using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -48,6 +49,11 @@ namespace BlocoNotas.ViewModels
         public Command BackListNotesCommand => _BackListNotesCommand ?? (_BackListNotesCommand = new Command(async () => await ExecuteBackListNotesCommand()));
 
         private async Task ExecuteBackListNotesCommand() => await _navigationService.PopAsync();
+
+        private Command _GoToEditNoteCommand;
+        public Command GoToEditNoteCommand => _GoToEditNoteCommand ?? (_GoToEditNoteCommand = new Command(async () => await ExecuteGoToNoteCommand()));
+
+        private async Task ExecuteGoToNoteCommand() => await _navigationService.PushAsync(new EditNoteView(_note));
 
         private Command _DeleteSelectedNoteCommand;
         public Command DeleteSelectedNoteCommand => _DeleteSelectedNoteCommand ?? (_DeleteSelectedNoteCommand = new Command(async () => await ExecuteDeleteSelectedNoteCommand()));
