@@ -1,5 +1,6 @@
 ﻿using BlocoNotas.Models;
 using BlocoNotas.Services;
+using BlocoNotas.Views;
 using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -46,10 +47,10 @@ namespace BlocoNotas.ViewModels
             }
         }
 
-        private Command _BackListNotesCommand;
-        public Command BackListNotesCommand => _BackListNotesCommand ?? (_BackListNotesCommand = new Command(async () => await ExecuteBackListNotesCommand()));
+        private Command _CancelEditNoteCommand;
+        public Command CancelEditNoteCommand => _CancelEditNoteCommand ?? (_CancelEditNoteCommand = new Command(async () => await ExecuteCancelEditNoteCommand()));
 
-        private async Task ExecuteBackListNotesCommand() => await _navigationService.PopAsync();
+        private async Task ExecuteCancelEditNoteCommand() => await _navigationService.PushAsync(new ListNoteView());
 
         private Command _UpDateSelectedNoteCommand;
         public Command UpDateSelectedNoteCommand => _UpDateSelectedNoteCommand ?? (_UpDateSelectedNoteCommand = new Command(async () => await ExecuteUpDateSelectedNoteCommand()));
@@ -66,7 +67,7 @@ namespace BlocoNotas.ViewModels
                 await App.Current.MainPage.DisplayAlert("Erro", "Erro ao editar nota => " + erro, "OK");
             }
 
-            await _navigationService.PopAsync();
+            await _navigationService.PushAsync(new ListNoteView());
         }
     }
 }

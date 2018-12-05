@@ -11,6 +11,8 @@ namespace BlocoNotas.Views
 		{
 			InitializeComponent ();
 
+            NavigationPage.SetHasBackButton(this, false);
+
             BindingContext = new ListNotesViewModel();
         }
 

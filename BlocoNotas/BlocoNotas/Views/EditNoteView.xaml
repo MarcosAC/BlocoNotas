@@ -5,29 +5,15 @@
              x:Class="BlocoNotas.Views.EditNoteView">
     
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">
-            <!-- Botão Voltar -->
-            <Label Text="&#xf060;"
-                   FontSize="Large" 
-                   TextColor="Black"
-                   Margin="0,0,30,0">
-
-                <Label.FontFamily>
-                    <OnPlatform x:TypeArguments="x:String" Android="fa-solid-900.ttf#Font Awesome 5 Free Regular" />
-                </Label.FontFamily>
-
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding BackListNotesCommand}" />
-                </Label.GestureRecognizers>
-            </Label>
+        <StackLayout Orientation="Horizontal">            
 
             <Label Text="Editar Nota" 
                    FontSize="18" 
                    TextColor="Black" 
                    VerticalTextAlignment="Center" />
 
-            <!-- Botão Editar Nota -->
-            <Label Text="&#xf044;"
+            <!-- Botão Salvar Nota -->
+            <Label Text="&#xf0c7;"
                    FontSize="Large" 
                    TextColor="Black"                        
                    HorizontalOptions="EndAndExpand"
@@ -42,8 +28,8 @@
                 </Label.GestureRecognizers>
             </Label>
 
-            <!-- Botão Excluir Nota -->
-            <Label Text="&#xf2ed;"
+            <!-- Botão Cancelar Nota -->
+            <Label Text="&#xf410;"
                    FontSize="Large" 
                    TextColor="Black"                        
                    HorizontalOptions="End"
@@ -54,10 +40,12 @@
                 </Label.FontFamily>
 
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding DeleteSelectedNoteCommand}" />
+                    <TapGestureRecognizer Command="{Binding CancelEditNoteCommand}" />
                 </Label.GestureRecognizers>
             </Label>
         </StackLayout>
+        
+        
     </NavigationPage.TitleView>
 
     <local:NoteView />
