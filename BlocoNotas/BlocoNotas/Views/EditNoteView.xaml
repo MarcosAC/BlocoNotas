@@ -5,15 +5,30 @@
              x:Class="BlocoNotas.Views.EditNoteView">
     
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">            
+        <StackLayout Orientation="Horizontal">
+            <!-- Botão Voltar -->
+            <Label Text="&#xf060;"
+                   FontSize="Large" 
+                   TextColor="Black"
+                   Margin="0,0,30,0">
+
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String" Android="fa-solid-900.ttf#Font Awesome 5 Free Regular" />
+                </Label.FontFamily>
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BackListNotesCommand}" />
+                </Label.GestureRecognizers>
+            </Label>            
 
             <Label Text="Editar Nota" 
                    FontSize="18" 
                    TextColor="Black" 
                    VerticalTextAlignment="Center" />
 
-            <!-- Botão Salvar Nota -->
-            <Label Text="&#xf0c7;"
+            <!-- Botão Editar Nota -->
+            <Label x:Name="BtnEdit"
+                   Text="&#xf044;"
                    FontSize="Large" 
                    TextColor="Black"                        
                    HorizontalOptions="EndAndExpand"
@@ -24,11 +39,45 @@
                 </Label.FontFamily>
 
                 <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding EnableFieldsCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <!-- Botão Salvar Nota -->
+            <Label Text="&#xf0c7;"
+                   FontSize="Large" 
+                   TextColor="Black"                        
+                   HorizontalOptions="EndAndExpand"
+                   Margin="0,0,30,0"
+                   IsVisible="False">
+
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String" Android="fa-regular-400.ttf#Font Awesome 5 Free Regular" />
+                </Label.FontFamily>
+
+                <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding UpDateSelectedNoteCommand}" />
                 </Label.GestureRecognizers>
             </Label>
 
+            <!-- Botão Excluir Nota -->
+            <Label Text="&#xf2ed;"
+                   FontSize="Large" 
+                   TextColor="Black"                        
+                   HorizontalOptions="End"
+                   Margin="0,0,30,0">
+
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String" Android="fa-regular-400.ttf#Font Awesome 5 Free Regular" />
+                </Label.FontFamily>
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding DeleteSelectedNoteCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+
             <!-- Botão Cancelar Nota -->
+            <!--
             <Label Text="&#xf410;"
                    FontSize="Large" 
                    TextColor="Black"                        
@@ -42,11 +91,9 @@
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding CancelEditNoteCommand}" />
                 </Label.GestureRecognizers>
-            </Label>
+            </Label>-->
         </StackLayout>
-        
-        
     </NavigationPage.TitleView>
 
-    <local:NoteView />
+    <local:NoteView IsEnabled="{Binding Edit}" />
 </ContentPage>

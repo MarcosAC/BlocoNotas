@@ -5,7 +5,8 @@
              x:Class="BlocoNotas.Views.NoteView">
     
     <StackLayout Padding="10">
-        <controls:CustomEntry  Text="{Binding TitleNote}"
+        <controls:CustomEntry  x:Name="EntryTitle"
+                               Text="{Binding TitleNote}"
                                Placeholder="Título" 
                                MaxLength="30" 
                                Margin="0,0,0,15" />
