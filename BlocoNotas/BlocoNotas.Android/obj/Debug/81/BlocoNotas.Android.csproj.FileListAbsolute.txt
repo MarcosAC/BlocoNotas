@@ -231,4 +231,6 @@ D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas.Android\obj\Debug\81\android\assets
 D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas.Android\obj\Debug\81\android\assets\Xamarin.Forms.Core.pdb
 D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.pdb
 D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.pdb
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas\bin\Debug\netstandard2.0\BlocoNotas.dll
+D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas.Android\bin\Debug\BlocoNotas.dll.mdb
 D:\Projetos\BlocoNotas\BlocoNotas\BlocoNotas.Android\obj\Debug\81\linksrc\BlocoNotas.dll.mdb

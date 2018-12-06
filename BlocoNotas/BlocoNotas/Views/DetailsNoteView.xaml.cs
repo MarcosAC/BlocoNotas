@@ -8,13 +8,23 @@ namespace BlocoNotas.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailsNoteView : ContentPage
     {
-        public DetailsNoteView(Note selectedNote = null)
+        private Note _selectedNote;
+
+        public DetailsNoteView(Note selectedNote)
         {
             InitializeComponent();
+
+            _selectedNote = selectedNote;
 
             NavigationPage.SetHasBackButton(this, false);
 
             BindingContext = new DetailsNoteViewModel(selectedNote);
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            BindingContext = new DetailsNoteViewModel(_selectedNote);
         }
     }
 }
