@@ -12,7 +12,7 @@ namespace BlocoNotas.Views
 		{
 			InitializeComponent ();
 
-            //NavigationPage.SetHasBackButton(this, false);
+            NavigationPage.SetHasBackButton(this, false);
 
             BindingContext = new EditNoteViewModel(selectedNote);
         }

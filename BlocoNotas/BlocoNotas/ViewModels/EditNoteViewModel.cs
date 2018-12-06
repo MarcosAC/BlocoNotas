@@ -12,9 +12,7 @@ namespace BlocoNotas.ViewModels
         private readonly INoteRepository _noteRepository;
         private readonly INavigationService _navigationService;
 
-        private bool Edit = false;
         private Note _note;
-        
 
         public EditNoteViewModel(Note selectedNote)
         {
@@ -52,15 +50,7 @@ namespace BlocoNotas.ViewModels
         private Command _CancelEditNoteCommand;
         public Command CancelEditNoteCommand => _CancelEditNoteCommand ?? (_CancelEditNoteCommand = new Command(async () => await ExecuteCancelEditNoteCommand()));
 
-        private async Task ExecuteCancelEditNoteCommand() => await _navigationService.PushAsync(new ListNoteView());
-
-        private Command _EnableFieldsCommand;
-        public Command EnableFieldsCommand => _EnableFieldsCommand ?? (_EnableFieldsCommand = new Command(() => ExecuteEnableFieldsCommand()));
-
-        private void ExecuteEnableFieldsCommand()
-        {
-            Edit = true;
-        }
+        private async Task ExecuteCancelEditNoteCommand() => await _navigationService.PushAsync(new ListNoteView());        
 
         private Command _UpDateSelectedNoteCommand;
         public Command UpDateSelectedNoteCommand => _UpDateSelectedNoteCommand ?? (_UpDateSelectedNoteCommand = new Command(async () => await ExecuteUpDateSelectedNoteCommand()));
@@ -77,7 +67,7 @@ namespace BlocoNotas.ViewModels
                 await App.Current.MainPage.DisplayAlert("Erro", "Erro ao editar nota => " + erro, "OK");
             }
 
-            await _navigationService.PushAsync(new ListNoteView());
+            await _navigationService.PopAsync();
         }
     }
 }

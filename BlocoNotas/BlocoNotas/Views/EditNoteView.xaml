@@ -7,7 +7,7 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <!-- Botão Voltar -->
-            <Label Text="&#xf060;"
+            <!--<Label Text="&#xf060;"
                    FontSize="Large" 
                    TextColor="Black"
                    Margin="0,0,30,0">
@@ -19,37 +19,20 @@
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding BackListNotesCommand}" />
                 </Label.GestureRecognizers>
-            </Label>            
+            </Label>-->            
 
             <Label Text="Editar Nota" 
                    FontSize="18" 
                    TextColor="Black" 
                    VerticalTextAlignment="Center" />
 
-            <!-- Botão Editar Nota -->
-            <Label x:Name="BtnEdit"
-                   Text="&#xf044;"
-                   FontSize="Large" 
-                   TextColor="Black"                        
-                   HorizontalOptions="EndAndExpand"
-                   Margin="0,0,30,0">
-
-                <Label.FontFamily>
-                    <OnPlatform x:TypeArguments="x:String" Android="fa-regular-400.ttf#Font Awesome 5 Free Regular" />
-                </Label.FontFamily>
-
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding EnableFieldsCommand}" />
-                </Label.GestureRecognizers>
-            </Label>
-
-            <!-- Botão Salvar Nota -->
+            
+            <!-- Botão Salvar Edição Nota -->
             <Label Text="&#xf0c7;"
                    FontSize="Large" 
                    TextColor="Black"                        
                    HorizontalOptions="EndAndExpand"
-                   Margin="0,0,30,0"
-                   IsVisible="False">
+                   Margin="0,0,30,0">
 
                 <Label.FontFamily>
                     <OnPlatform x:TypeArguments="x:String" Android="fa-regular-400.ttf#Font Awesome 5 Free Regular" />
@@ -61,7 +44,7 @@
             </Label>
 
             <!-- Botão Excluir Nota -->
-            <Label Text="&#xf2ed;"
+            <!--<Label Text="&#xf2ed;"
                    FontSize="Large" 
                    TextColor="Black"                        
                    HorizontalOptions="End"
@@ -74,10 +57,9 @@
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding DeleteSelectedNoteCommand}" />
                 </Label.GestureRecognizers>
-            </Label>
+            </Label>-->
 
-            <!-- Botão Cancelar Nota -->
-            <!--
+            <!-- Botão Cancelar Edição Nota -->            
             <Label Text="&#xf410;"
                    FontSize="Large" 
                    TextColor="Black"                        
@@ -91,9 +73,9 @@
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding CancelEditNoteCommand}" />
                 </Label.GestureRecognizers>
-            </Label>-->
+            </Label>
         </StackLayout>
     </NavigationPage.TitleView>
 
-    <local:NoteView IsEnabled="{Binding Edit}" />
+    <local:NoteView />
 </ContentPage>
