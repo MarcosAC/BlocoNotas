@@ -1,6 +1,5 @@
 ﻿using BlocoNotas.Models;
 using BlocoNotas.Services;
-using BlocoNotas.Views;
 using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -50,7 +49,7 @@ namespace BlocoNotas.ViewModels
         private Command _CancelEditNoteCommand;
         public Command CancelEditNoteCommand => _CancelEditNoteCommand ?? (_CancelEditNoteCommand = new Command(async () => await ExecuteCancelEditNoteCommand()));
 
-        private async Task ExecuteCancelEditNoteCommand() => await _navigationService.PushAsync(new ListNoteView());        
+        private async Task ExecuteCancelEditNoteCommand() => await _navigationService.PopAsync();        
 
         private Command _UpDateSelectedNoteCommand;
         public Command UpDateSelectedNoteCommand => _UpDateSelectedNoteCommand ?? (_UpDateSelectedNoteCommand = new Command(async () => await ExecuteUpDateSelectedNoteCommand()));
