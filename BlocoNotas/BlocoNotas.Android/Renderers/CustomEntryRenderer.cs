@@ -5,7 +5,7 @@ using BlocoNotas.Droid.Renderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(CustomEditor), typeof(CustomEditorRenderer))]
+[assembly: ExportRenderer(typeof(CustomEntry), typeof(CustomEntryRenderer))]
 namespace BlocoNotas.Droid.Renderers
 {
     public class CustomEntryRenderer : EntryRenderer
@@ -36,7 +36,7 @@ namespace BlocoNotas.Droid.Renderers
             gd.SetColor(Android.Graphics.Color.White);
             gd.SetCornerRadius(10);
             gd.SetStroke(4, Android.Graphics.Color.LightGray);
-            Control.SetBackground(gd); ;
+            Control.SetBackground(gd);
         }
     }
 }
